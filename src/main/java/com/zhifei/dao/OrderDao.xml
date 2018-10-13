@@ -5,8 +5,6 @@
 <mapper namespace="com.zhifei.dao.OrderDao">
 
 	<select id="getById" resultType="Order" parameterType="Integer">
-		select * from order where id=#{id};
+		select * from tbl_order where id=#{id};
 	</select>
 </mapper>
- 
-

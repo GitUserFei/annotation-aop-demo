@@ -2,6 +2,8 @@ package com.zhifei.dao;
 
 import com.zhifei.model.Order;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * className:OrderDao
@@ -13,6 +15,6 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface OrderDao {
-    //@Select("select * from order where id=#{id}")
-    Order getById(int id);
+    @Select("select * from tbl_order where id=#{id}")
+    Order getById(@Param("id") int id);
 }
